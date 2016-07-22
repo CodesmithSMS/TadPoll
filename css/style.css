@@ -1,0 +1,18 @@
+
+body div div{
+  border: 1px solid black;
+  position: absolute;
+}
+
+#App {
+  position: relative;
+  width: 833px;
+  height: 544px;
+}
+
+#LoginBox {
+  width: 291px;
+  height: 306px;
+  top: 91px;
+  left: 248px;
+}
