@@ -11,7 +11,7 @@ db.once('open', function() {
 
 var dbMethods = {};
 
-// Mongodb CRUD Operations
+// Mongodb CRUD Operation
 
 dbMethods.savePollInstance = function(pollToSave){
   var pollTemp = new poll(pollToSave);
