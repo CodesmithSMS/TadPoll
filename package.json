@@ -33,6 +33,7 @@
     "pg-hstore": "^2.3.2",
     "react": "^0.14.8",
     "react-bootstrap": "^0.30.0-rc.2",
+    "react-bootstrap-validation": "^0.1.11",
     "react-dom": "^0.14.0",
     "react-easy-chart": "^0.1.4",
     "vinyl-source-stream": "^1.1.0"
