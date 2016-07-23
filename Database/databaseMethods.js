@@ -11,9 +11,9 @@ db.once('open', function() {
 
 var dbMethods = {};
 
-// Mongo CRUD Operations
+// Mongodb CRUD Operations
 
-dbMethods.savePoll = function(pollToSave){
+dbMethods.savePollInstance = function(pollToSave){
   var pollTemp = new poll(pollToSave);
   pollTemp.save(function(err, pollToSave) {
     if (err) return console.error('Error! ' + err);
@@ -21,11 +21,16 @@ dbMethods.savePoll = function(pollToSave){
   });
 }
 
-dbMethods.deletePoll = function(pollToDelete_id){
+dbMethods.deletePollInstance = function(pollToDelete_id){
   poll.findByIdAndRemove(pollToDelete_id, function(err, poll){
-    console.log(poll);
+    console.log('removed ' poll);
   })
 }
+
+
+
+
+
 
 
 

@@ -2,22 +2,20 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 
-// var pollSchema = new Schema({
-//   hostOwner: String,
-//   accessCode: String,
-//   pollQuestionMeta: {
-//     title: String,
-//     questions: [String],
-//     results: [Number]
-//   },
-//   isActive: Boolean,
-//   created_at: Date,
-//   updated_at: Date
-// });
-
 var pollSchema = new Schema({
-  name : String
+  hostOwner: String,
+  Title: String,
+  accessCode: String,
+  pollQuestionMeta: {
+    title: String,
+    questions: [String],
+    results: [Number]
+  },
+  isActive: Boolean,
+  created_at: Date,
+  updated_at: Date
 });
+
 
 // the schema is useless so far
 // we need to create a model using it
