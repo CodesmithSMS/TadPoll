@@ -11,7 +11,16 @@ db.once('open', function() {
 
 var dbMethods = {};
 
-// Mongodb CRUD Operations
+//Mongodb CRUD Operation for HOSTS
+dbMethods.createNewHost = function(hostData){
+  var hostTemp = new host(hostData);
+  hostTemp.save(function(err, hostData) {
+    if (err) return console.error('Error! ' + err);
+    console.dir('saved!');
+  });
+}
+
+// Mongodb CRUD Operations for POLLS
 
 dbMethods.savePollInstance = function(pollToSave){
   var pollTemp = new poll(pollToSave);

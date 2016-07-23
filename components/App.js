@@ -1,18 +1,17 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var LoginBox = require('./LoginBox');
+import { Grid, Row, Col } from 'react-bootstrap';
+import React, {Component} from 'react';
+import {render} from 'react-dom';
+import LoginBox from './LoginBox';
 
-var App = React.createClass({
-  render: function () {
-    return (
-      <div id='App'>
-        App
-        <LoginBox />
-      </div>
-    )
-  }
-});
 
-module.exports = App;
+export default class App extends Component {
+ render() {
+   return (
+     <div id='App'>
+       <LoginBox />
+     </div>
+   )
+ }
+}
 
-ReactDOM.render(<App />, document.getElementById('main-container'));
+render(<App />, document.getElementById('main-container'));
