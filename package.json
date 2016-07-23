@@ -21,13 +21,16 @@
     "babelify": "^7.2.0",
     "bootstrap": "^3.3.6",
     "browserify": "^10.2.4",
+    "chartist": "^0.9.8",
+    "d3": "^4.1.1",
     "express": "^4.13.3",
     "gulp": "^3.9.0",
     "gulp-notify": "^2.2.0",
     "normalize.css": "^4.2.0",
     "path": "^0.12.7",
-    "react": "^0.14",
+    "react": "^0.14.8",
     "react-bootstrap": "^0.30.0-rc.2",
+    "react-chartist": "^0.10.2",
     "react-dom": "^0.14.0",
     "vinyl-source-stream": "^1.1.0"
   }

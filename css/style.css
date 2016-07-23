@@ -3,9 +3,13 @@ body div div{
   position: absolute;
 }
 
+.well {
+  height: 400px;
+  width: 400px;
+}
 .jumbotron {
   height: 800px;
-  background: url("http://cdn.klimg.com/kapanlagi.com/wallpaper/img/lily-pad02.jpg") no-repeat center center fixed;
+  background: url("") no-repeat center center fixed;
   background-size: cover;
 }
 
