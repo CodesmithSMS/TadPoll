@@ -21,6 +21,10 @@ dbMethods.createNewHost = function(hostData){
   });
 }
 
+
+
+
+
 // Mongodb CRUD Operations for POLLS
 
 
