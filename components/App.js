@@ -7,9 +7,10 @@ import Data from './Data';
 
 export default class App extends Component {
 render() {
+
   return (
     <div id='App'>
-      <Data />
+      <LoginBox />
     </div>
   )
 }

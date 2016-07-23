@@ -1,26 +1,76 @@
-import { FormGroup, FormControl, Radio, Button, Well } from 'react-bootstrap';
+import { ButtonInput, FormGroup, FormControl, Radio, Button, Well } from 'react-bootstrap';
 import React, {Component} from 'react';
+import Radiobutton from './Radio_1';
+import SubmitBtn from './SubmitButton';
+
 
 export default class LoginBox extends Component {
 render() {
+  const questions = this.createQuestions();
   return (
     <div id='LoginBox'>
-      Hello
-      <form>
       <Well>
-      <h3>How awesome is this presentation?</h3>
-          <FormGroup>
-            <Radio>Kinda of awesome</Radio>
-            {' '}
-            <Radio>Pretty awesome</Radio>
-            {' '}
-            <Radio>Very awesome</Radio>
-            {' '}
-            <Radio>Ridiculously effing awesome</Radio>
-          </FormGroup>
-         </Well>
-       </form>
+        <h3>How awesome is this presentation?</h3>
+          <div>{ questions }</div>
+            <SubmitBtn />
+      </Well>
     </div>
   )
 }
+
+  createQuestions(){
+    class Question {
+      constructor (answer, checked, enabled) {
+        this.answer = answer,
+        this.checked = checked,
+        this.enabled = enabled
+    }
+  };
+  const answer1 = new Question ('Okay', 'checked', 'enabled');
+  const answer2 = new Question ('Good', 'checked', 'enabled');
+  const answer3 = new Question ('Very Good', 'checked', 'enabled');
+  const answer4 = new Question ('Great', 'checked', 'enabled');
+  const answer5 = new Question ('Excellent', 'checked', 'enabled');
+
+  const questions = [answer1, answer2, answer3, answer4, answer5];
+  return questions.map((item) => {
+    return (
+      <Radiobutton answer={item.answer} checked={item.checked} enabled={item.enabled} key={item.answer}/>
+    )
+  })
+
 }
+
+}
+
+//
+// import { ButtonInput, FormGroup, FormControl, Radio, Button, Well } from 'react-bootstrap';
+// import React, {Component} from 'react';
+//
+//
+//
+// export default class LoginBox extends Component {
+// render() {
+//   return (
+//     <div id='LoginBox'>
+//       <form>
+//       <Well>
+//         <h3>How awesome is this presentation?</h3>
+//             <FormGroup>
+//               <Radio class="btn" id="A">Kinda awesome</Radio>
+//               {' '}
+//               <Radio class="btn" id="B">Pretty awesome</Radio>
+//               {' '}
+//               <Radio class="btn" id="C">Very awesome</Radio>
+//               {' '}
+//               <Radio class="btn" id="D">Ridiculously effing awesome</Radio>
+//             </FormGroup>
+//             <Button id="button" type="submit">
+//               Submit
+//             </Button>
+//          </Well>
+//        </form>
+//     </div>
+//   )
+// }
+// }
