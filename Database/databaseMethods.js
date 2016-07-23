@@ -3,7 +3,7 @@ var db = mongoose.connection;
 
 var host = require('../Database/Models/HostModel');
 var poll = require('../Database/Models/PollModel');
-
+//verifying
 db.on('error', console.error);
 db.once('open', function() {
   console.log('open!');

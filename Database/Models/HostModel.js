@@ -2,7 +2,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-
+//host is not currently used, kept in app to be used in future features (e.g. authentication)
 var hostSchema = new Schema({
   name: String,
   username: { type: String, required: true, unique: true },
