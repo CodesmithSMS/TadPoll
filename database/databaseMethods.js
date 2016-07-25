@@ -13,7 +13,8 @@ var dbMethods = {};
 
 
 //Mongodb CRUD Operation for HOSTS
-dbMethods.createNewHost = function(hostData){
+dbMethods.createNewHost = function(req, res){
+  var hostData = req.body;
   var hostTemp = new Host(hostData);
   hostTemp.save(function(err, hostData) {
     if (err) return console.error('Error! ' + err);
@@ -22,25 +23,25 @@ dbMethods.createNewHost = function(hostData){
 }
 
 
-// dbMethods.verifyHost = function(hostNameInput, hostPasswordInput) {
-//
-//     // fetch user and test password verification
-//     Host.findOne({ username: 'SarahJ' }, function(err, user) {
-//         if (err) throw err;
-//
-//         // test a matching password
-//         user.comparePassword('Password123', function(err, isMatch) {
-//             if (err) throw err;
-//             console.log('Password123:', isMatch); // -> Password123: true
-//         });
-//
-//         // test a failing password
-//         user.comparePassword('123Password', function(err, isMatch) {
-//             if (err) throw err;
-//             console.log('123Password:', isMatch); // -> 123Password: false
-//         });
-//     });
-//   }
+dbMethods.verifyHost = function(hostNameInput, hostPasswordInput) {
+
+    // fetch user and test password verification
+    Host.findOne({ username: 'SarahJ' }, function(err, user) {
+        if (err) throw err;
+
+        // test a matching password
+        user.comparePassword('Password123', function(err, isMatch) {
+            if (err) throw err;
+            console.log('Password123:', isMatch); // -> Password123: true
+        });
+
+        // test a failing password
+        user.comparePassword('123Password', function(err, isMatch) {
+            if (err) throw err;
+            console.log('123Password:', isMatch); // -> 123Password: false
+        });
+    });
+  }
 
 // Mongodb CRUD Operations for POLLS
 
