@@ -9,13 +9,21 @@ render() {
   const questions = this.createQuestions();
   return (
     <div id='LoginBox'>
-      <Well>
-        <h3>How awesome is this presentation?</h3>
-          <div>{ questions }</div>
-            <SubmitBtn />
-      </Well>
+    <form onSubmit={this.login.bind(this)}>
+    <input id="userName" />
+    <input id="pw" />
+    <button id="submit" />
+    </form>
     </div>
   )
+}
+
+login() {
+  var obj = {};
+  obj.name = $('#userName');
+  obj.pw = $('#pw');
+  obj = JSON.stringify(obj);
+  $.post('/login',obj);
 }
 
   createQuestions(){

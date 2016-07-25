@@ -9,6 +9,8 @@ app.get('/', function(req,res) {
   res.sendFile('/index.html');
 });
 
-app.listen(3000, function() {
+app.post('/login', dbMethods.createNewHost);
+
+app.listen(8080, function() {
   console.log('Server is listening on port 3000');
 });

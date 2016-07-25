@@ -11,6 +11,7 @@ render() {
   return (
     <div id='App'>
       <LoginBox />
+      {/*<Data />*/}
     </div>
   )
 }
